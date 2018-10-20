@@ -3,7 +3,7 @@ A spin on the classic game of Set.
 
 # How the game is played:
 
--To Start, the cards are dealt to the players one at a time starting with Player 0 until all cards are dealt. (Note that some players may get an extra card. Tough luck.) Players don't look at their cards and they keep them in a pile face down.
+- To Start, the cards are dealt to the players one at a time starting with Player 0 until all cards are dealt. (Note that some players may get an extra card. Tough luck.) Players don't look at their cards and they keep them in a pile face down.
 
 - Player 0 goes first, followed by Player 1, etc. and then back to Player 0.
 
