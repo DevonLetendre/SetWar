@@ -1,6 +1,7 @@
-# A superclass for a general set of cards
 from mydatastructures import ListNode
 from mydatastructures import DoublyLinkedList
+
+# A superclass for a general set of cards.
 
 class DeckOfCards:
 	'''
@@ -77,12 +78,3 @@ class DeckOfCards:
 
 	def __len__(self):
 		return len(self._L)
-
-
-
-
-
-
-
-
-
