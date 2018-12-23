@@ -1,23 +1,24 @@
-#Main Module
-#INPUT: Number of players and a string of cards
-#OUTPUT: A string that says which player won and how many rounds it took
+import sys 
 from setdeck import SetDeck
 from FindSet import matcher
-import sys 
+'''
+This is the main module for the setwar game. 
+INPUT: Number of players and a string of cards
+OUTPUT: A string that says which player won and how many rounds it took
+'''
 
-#A function that can play setWar if given the number of players and a list of cards
 def play(playerDecks,tableDeck):
+	# A function that can play setWar if given the number of players and a list of cards
 	rounds = 0
 	winnerNum = 0
 	winnerBool = False
 	matchBool = False
 	index = 0
-
+	
 	while not winnerBool:
 		while not matchBool:
-			
 			tableDeck.pushCardBottom(playerDecks[index].popTopCard())
-
+			
 			if len(tableDeck) >= 3:
 				if matcher(tableDeck) != -1:
 					playerDecks[index].receiveDeck(tableDeck)
@@ -25,7 +26,7 @@ def play(playerDecks,tableDeck):
 					rounds = rounds + 1
 					index  = 0 
 					break
-
+					
 			if (len(playerDecks[index]) == 0):
 					del playerDecks[index]
 					index = index - 1
@@ -33,28 +34,27 @@ def play(playerDecks,tableDeck):
 						winnerBool = True
 						rounds = 1
 						break
-
+						
 			if playerDecks[index] == playerDecks[-1]:
 				index = 0
 				continue
-
 			index = index + 1
-
+			
 		if len(playerDecks) == 1:
 			winnerNum = playerDecks
 			winnerBool = True
-
+			
 	if len(playerDecks) == 0:
 		winnerNum = 0
 	else:
 		winnerNum = winnerNum[0].pnum
-
+		
 	if rounds == 1:
 		print("Player %d won in %d round." % (winnerNum, rounds))
 	else:
 		print("Player %d won in %d rounds." % (winnerNum, rounds))
 
-#Takes input if called externally
+# Takes input if called externally
 if __name__ == "__main__":
 	cards = []
 	players = 0
