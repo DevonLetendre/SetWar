@@ -1,4 +1,5 @@
-#Contains various data structures to be used in other modules. 
+# Contains various data structures to be used in other modules. 
+
 class ListNode:
       def __init__(self, data, prev = None, link = None):
           self.data = data
@@ -8,8 +9,7 @@ class ListNode:
               self.prev.link = self
           if link is not None:
               self.link.prev = self
-              
-
+             
 class DoublyLinkedList:
       def __init__(self):
           self._head = None
