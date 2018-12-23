@@ -1,5 +1,8 @@
-# Contains various data structures to be used in other modules. 
-
+'''
+This module contains the 'DoublyLinkedList' class and the 'ListNode' class 
+(required for the 'DoublyLinkedList' class). These classes are used in other 
+parts of the project. 
+'''
 class ListNode:
       def __init__(self, data, prev = None, link = None):
           self.data = data
